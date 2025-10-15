@@ -3,10 +3,9 @@
   <menuitem
     id="menu_attestation_adhesion_property_root"
     name="Adhesions">
-    />
   <menuitem 
     id="menu_attestation_adhesion"
-    name="Adhesions"
+    name="Adh"
     action="action_attestation_adhesion"
     sequence="1"
     />

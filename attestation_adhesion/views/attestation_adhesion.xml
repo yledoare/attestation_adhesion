@@ -15,15 +15,6 @@
                 <field name="amount"/>
                 <field name="payment_day"/>
               </group>
-              <notebook>
-                <page string="Property address">
-                  <field name="name_of_customer"/>
-                  <field name="street_of_property"/>
-                  <field name="zip_of_property"/>
-                  <field name="city_of_property"/>
-                  <field name="email_of_customer"/>
-                </page>
-              </notebook>
             </group>
           </sheet>
           <chatter/>

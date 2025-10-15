@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<record id="action_report_attestation.adhesion" model="ir.actions.report">
+		<record id="action_report_attestation_adhesion" model="ir.actions.report">
 			<field name="name">Adhesion</field>
 			<field name="model">attestation.adhesion</field>
 			<field name="report_type">qweb-pdf</field>
-			<field name="report_name">attestation.adhesion.attestation.adhesion_report</field>
-			<field name="report_file">attestation_adhesion.attestation.adhesion_report</field>
+			<field name="report_name">attestation.adhesion.attestation_adhesion_report</field>
+			<field name="report_file">attestation_adhesion.attestation_adhesion_report</field>
 			<field name="print_report_name">'Adhesion'</field>
-			<field name="binding_model_id" ref="model_attestation.adhesion"/>
+			<field name="binding_model_id" ref="model_attestation_adhesion"/>
 			<field name="binding_type">report</field>
 		</record>
 	</data>
