@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+    <record id="view_attestation_adhesion_form" model="ir.ui.view">
+      <field name="name">attestation.adhesion.form</field>
+      <field name="model">attestation.adhesion</field>
+      <field name="arch" type="xml">
+        <form string="Adhesions">
+          <sheet>
+            <header>
+              <button name="send_email_with_pdf_attach" string="Send email" type="object"></button>
+            </header>
+            <group>
+              <group>
+                <field name="customer_id"/>
+                <field name="amount"/>
+                <field name="payment_day"/>
+              </group>
+              <notebook>
+                <page string="Property address">
+                  <field name="name_of_customer"/>
+                  <field name="street_of_property"/>
+                  <field name="zip_of_property"/>
+                  <field name="city_of_property"/>
+                  <field name="email_of_customer"/>
+                </page>
+              </notebook>
+            </group>
+          </sheet>
+          <chatter/>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_attestation_adhesion_list" model="ir.ui.view">
+      <field name="name">attestation.adhesion.list</field>
+      <field name="model">attestation.adhesion</field>
+      <field name="arch" type="xml">
+        <list string="Adhesions">
+          <field name="customer_id"/>
+          <field name="amount"/>
+          <field name="payment_day"/>
+        </list>
+      </field>
+    </record>
+    <record id="action_attestation_adhesion" model="ir.actions.act_window">
+      <field name="name">Adhesions</field>
+      <field name="res_model">attestation.adhesion</field>
+      <field name="view_mode">list,form</field>
+    </record>
+  </data>
+</odoo>

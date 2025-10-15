@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <menuitem
+    id="menu_attestation_adhesion_property_root"
+    name="Adhesions">
+    />
+  <menuitem 
+    id="menu_attestation_adhesion"
+    name="Adhesions"
+    action="action_attestation_adhesion"
+    sequence="1"
+    />
+</menuitem>   
+</odoo>

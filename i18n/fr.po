@@ -1,0 +1,551 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rent_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-31 06:03+0000\n"
+"PO-Revision-Date: 2025-08-31 06:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rent_receipt
+#: model:ir.actions.report,print_report_name:rent_receipt.action_report_rent_receipt_location
+msgid "'Rental receipt'"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid ""
+", for the payment of rent and charges for the rental period of the month"
+msgstr ""
+", pour le paiement du loyer et des charges pour la location du mois de"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid ", owner of the accommodation located"
+msgstr ", propriétaire de du bien situé"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid ", the"
+msgstr ", le"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid ", the sum of"
+msgstr ", la somme de"
+
+
+#. module: rent_receipt
+#: model:mail.template,body_html:rent_receipt.mail_template_receipt_location
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<div style=\"justify-content: center;background-color: #714B67; padding:0.6rem;padding-left: 35px;text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;width:40%\">\n"
+"            <h2><t> Hi, </t><t t-out=\"object.customer_id.name\"/> </h2>\n"
+"\t\t\t\t\t\t<div>\n"
+"              <h3><t>You will find here you rent receipt</t></h3>\n"
+"\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t<br/>\n"
+"          <t>Regards,</t>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t<t t-out=\"object.property_id.owner_id.name\"/>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"\t\t\t\t\t<div style=\"justify-content: center;background-color: #714B67; padding:0.6rem;padding-left: 35px;text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;width:40%\">\n"
+"            <h2><t> Bonjour, </t><t t-out=\"object.customer_id.name\"/> </h2>\n"
+"\t\t\t\t\t\t<div>\n"
+"              <h3><t>Vous trouverez ci-jointe votre quittance de loyer</t></h3>\n"
+"\t\t\t\t\t\t</div>\n"
+"\t\t\t\t\t</div>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t<br/>\n"
+"          <t>Cordialement,</t>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t<t t-out=\"object.property_id.owner_id.name\"/>\n"
+"\t\t\t\t\t<br/>\n"
+"\t\t\t\t</div>\n"
+"\t\t\t"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__amount
+msgid "Amount"
+msgstr "Montant"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__amount_net
+msgid "Amount Net"
+msgstr "Montant total"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__amount_charges
+msgid "Amount charges"
+msgstr "Charges locatives"
+
+#. module: rent_receipt
+#: model:ir.model.fields.selection,name:rent_receipt.selection__rent_receipt_property__type__appartement
+msgid "Appartement"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__city_of_property
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__city
+msgid "City"
+msgstr "Ville"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_location_form
+msgid "Contract Location"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__country_id
+msgid "Country"
+msgstr "Pays"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__create_uid
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__create_date
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__currency
+msgid "Currency"
+msgstr "Devise"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__customer_id
+msgid "Customer"
+msgstr "Locataire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__email_of_customer
+msgid "Customer Email"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__name_of_customer
+msgid "Customer Name"
+msgstr "Nom du locataire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__description
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__description
+msgid "Description"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Details of the regulations :"
+msgstr "Détail du paiement:"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__display_name
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: rent_receipt
+#: model:mail.template,name:rent_receipt.mail_template_receipt_location
+msgid "Email Template For rent receipt"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields.selection,name:rent_receipt.selection__rent_receipt_property__type__house
+msgid "House"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid ""
+"I thank you in advance and please accept the expression of my most "
+"distinguished sentiments."
+msgstr ""
+"je vous remercie d’avance et je vous prie d’agréer l’expression de mes "
+"sentiments les plus distingués."
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "I, the undersigned"
+msgstr "Je, soussigné"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__id
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__id
+msgid "ID"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__image_1024
+msgid "Image 1024"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__image_128
+msgid "Image 128"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__image_256
+msgid "Image 256"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__image_512
+msgid "Image 512"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__write_uid
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__write_date
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.ui.menu,name:rent_receipt.menu_rent_receipt_location
+msgid "Locations"
+msgstr "Loyers"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields.selection,name:rent_receipt.selection__rent_receipt_property__type__office
+msgid "Office"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__owner_id
+msgid "Owner"
+msgstr "Propriétaire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__city_of_owner
+msgid "Owner City"
+msgstr "Ville du propiétaire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__email_of_owner
+msgid "Owner Email"
+msgstr "Email du propiétaire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__name_of_owner
+msgid "Owner Name"
+msgstr "Nom du propriétaire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__street_of_owner
+msgid "Owner Street"
+msgstr "Rue du propriétaire"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__zip_of_owner
+msgid "Owner Zip"
+msgstr "Code postal du propriétaire"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_location_form
+msgid "Owner address"
+msgstr "Adresse du propriétaire"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Payment date :"
+msgstr "Date de paiement:"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__payment_day
+msgid "Payment day"
+msgstr "Jour de paiement"
+
+#. module: rent_receipt
+#: model:ir.ui.menu,name:rent_receipt.menu_rent_receipt_property
+msgid "Properties"
+msgstr "Biens"
+
+#. module: rent_receipt
+#: model:ir.model,name:rent_receipt.model_rent_receipt_property
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__property_id
+msgid "Property"
+msgstr "Bien"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_location_form
+msgid "Property address"
+msgstr "Adresse du bien"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Provision for charges:"
+msgstr "Provision pour charges:"
+
+#. module: rent_receipt
+#: model:ir.actions.act_window,name:rent_receipt.action_rent_receipt_location
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_location_list
+msgid "Rent Receipt Location"
+msgstr "Locations"
+
+#. module: rent_receipt
+#: model:ir.ui.menu,name:rent_receipt.menu_rent_receipt_property_root
+msgid "Rent Receipt Management"
+msgstr "Gestion des quittances de loyer"
+
+#. module: rent_receipt
+#: model:ir.actions.act_window,name:rent_receipt.action_rent_receipt_property
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_property_form
+msgid "Rent Receipt Property"
+msgstr "Gestion de quittances de loyer"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_property_list
+msgid "Rent Receipt Property List"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.actions.report,name:rent_receipt.action_report_rent_receipt_location
+msgid "Rent receipt Location"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model,name:rent_receipt.model_rent_receipt_location
+msgid "Rent receipt location"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Rent:"
+msgstr "Location:"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Rental Receipt"
+msgstr "Quittance de loyer"
+
+#. module: rent_receipt
+#: model:mail.template,subject:rent_receipt.mail_template_receipt_location
+msgid "Rent receipt for {{object.current_month}} {{object.current_year}}"
+msgstr "Quittance de loyer pour {{object.current_month}} {{object.current_year}}"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.view_rent_receipt_location_form
+msgid "Send email"
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__street_of_property
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: rent_receipt
+#: model:ir.model.constraint,message:rent_receipt.constraint_rent_receipt_property_unique_name
+msgid "The name of the property must be unique"
+msgstr ""
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "Total rent :"
+msgstr "Loyer total :"
+
+#. module: rent_receipt
+#: model:ir.model.fields,help:rent_receipt.field_rent_receipt_location__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_location__zip_of_property
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__zip
+msgid "Zip"
+msgstr "Code postal"
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "and gives him a receipt, subject to all my rights."
+msgstr "et lui en donne quittance, sous réserve de tous mes droits."
+
+#. module: rent_receipt
+#: model_terms:ir.ui.view,arch_db:rent_receipt.rent_receipt_location_report
+msgid "declares having received"
+msgstr "déclare avoir reçu de"
+
+#. module: rent_receipt
+#: model:ir.model.fields,field_description:rent_receipt.field_rent_receipt_property__type
+msgid "type"
+msgstr ""
+
+#. module: rent_receipt
+#. odoo-python
+#: code:addons/rent_receipt/models/rent_receipt_location.py:0
+msgid "Rent receipt"
+msgstr "Quittance de loyer"

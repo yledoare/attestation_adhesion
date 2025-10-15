@@ -1,1 +1,1 @@
-# attestation_adhesion
+Module Odoo pour envoyer les attestation d'adhésions
