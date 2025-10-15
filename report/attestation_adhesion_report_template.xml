@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<record id="action_report_rent_receipt_location" model="ir.actions.report">
-			<field name="name">Rent receipt Location</field>
-			<field name="model">rent.receipt.location</field>
+		<record id="action_report_attestation.adhesion" model="ir.actions.report">
+			<field name="name">Adhesion</field>
+			<field name="model">attestation.adhesion</field>
 			<field name="report_type">qweb-pdf</field>
-			<field name="report_name">rent_receipt.rent_receipt_location_report</field>
-			<field name="report_file">rent_receipy.rent_receipt_location_report</field>
-			<field name="print_report_name">'Rental receipt'</field>
-			<field name="binding_model_id" ref="model_rent_receipt_location"/>
+			<field name="report_name">attestation.adhesion.attestation.adhesion_report</field>
+			<field name="report_file">attestation_adhesion.attestation.adhesion_report</field>
+			<field name="print_report_name">'Adhesion'</field>
+			<field name="binding_model_id" ref="model_attestation.adhesion"/>
 			<field name="binding_type">report</field>
 		</record>
 	</data>
