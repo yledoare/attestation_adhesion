@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 	<data>
-		<record id="mail_template_adhesions" model="mail.template">
+		<record id="mail_template_attestation_adhesion" model="mail.template">
 			<field name="name">Email Template For Adhesions</field>
 			<field name="model_id" ref="model_attestation_adhesion"/>
 			<field name="email_from">{{object.customer_id.email}}</field>

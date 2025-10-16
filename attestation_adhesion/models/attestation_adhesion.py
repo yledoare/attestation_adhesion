@@ -20,7 +20,7 @@ class AttestationAdhesion(models.Model):
     _description = 'Adhesions'
 
     def action_send_mail(self):
-      template = self.env.ref('attestation_adhesion.mail_template_receipt')
+      template = self.env.ref('attestation_adhesion.mail_template_attestation_adhesion')
       if template:
         template.send_mail(self.id, force_send=True)
       else:
@@ -29,7 +29,7 @@ class AttestationAdhesion(models.Model):
       report_pdf = request.env[ "ir.actions.report" ]._render_qweb_pdf( "attestation_adhesion.attestation_adhesion_report", [self.id])
       pdf_base64 = base64.b64encode(report_pdf[0])
       attachment_values = {
-        'name': _("Rent receipt") + ".pdf",
+        'name': _("Adhesion") + ".pdf",
         'type': 'binary',
         'datas': pdf_base64,
         'mimetype': 'application/pdf',
@@ -40,7 +40,7 @@ class AttestationAdhesion(models.Model):
             'type': 'binary',
             'res_model': 'attestation.adhesion',
             }
-      email_template = self.env.ref('attestation_adhesion.mail_template_receipt')
+      email_template = self.env.ref('attestation_adhesion.mail_template_attestation_adhesion')
       email_template.attachment_ids = [(4, attachment.id)]
 
       if email_template:
@@ -50,6 +50,7 @@ class AttestationAdhesion(models.Model):
     customer_id = fields.Many2one('res.partner', string='Customer')
     amount = fields.Float('Amount')
     payment_day = fields.Integer('Payment day')
+    currency = fields.Char('Currency', default="Euros")
 
     name_of_customer = fields.Char(
             string='Customer Name',
