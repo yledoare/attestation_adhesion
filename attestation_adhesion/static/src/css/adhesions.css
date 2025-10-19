@@ -1,0 +1,11 @@
+.attestation_adresse {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 24px;
+}
+.attestation_body {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 24px;
+    text-align: justify;
+}

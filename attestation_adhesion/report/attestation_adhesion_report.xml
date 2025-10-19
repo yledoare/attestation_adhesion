@@ -6,33 +6,47 @@
         <t t-call="web.external_layout">
           <t t-name="attestation_adhesion.attestation_adhesion_report">
             <div class="text-center">
-              <h2>Adhésion</h2>
+              <h2>Adhésion <span t-field="doc.name_of_organization"/></h2>
             </div>
             <div>
-              <br/>
-              <br/>
               <br/><br/>
             </div>
-            <div class="row" style="margin-left:500px;">
+            <div class="attestation_adresse" style="margin-left:500px;">
               <strong><span t-field="doc.customer_id.name"/></strong> <br/>
               <span t-field="doc.customer_id.street"/>  <br/>
-              <span t-field="doc.customer_id.zip"/> <span t-field="doc.customer_id.city"/> <br/> <br/>
+              <span t-field="doc.customer_id.zip"/>&#160;<span t-field="doc.customer_id.city"/> <br/> <br/>
             </div>
-            <p><t>Je, sous-signé</t><span>&#160;</span><span t-field="doc.name_of_customer"/><br/><br/>
-              <span t-field="doc.title_of_organization"/>&#160;<span t-field="doc.name_of_organization"/><br/><br/>
+            <div class="attestation_body">
+              <p><t>Je, sous-signé</t><span>&#160;</span><span t-field="request.env.user.name"/><br/><br/>
+                <span t-field="doc.title_of_organization"/>&#160;<span t-field="doc.name_of_organization"/><br/><br/>
                 <t>certifie avoir reçu de</t><span>&#160;</span><span t-field="doc.name_of_customer"/><span>&#160;</span><t>la somme de</t><span>&#160;</span>
                 <span t-options="{&quot;widget&quot;: &quot;float&quot;, &quot;precision&quot;: 2}" t-field="doc.amount"/> <span t-field="doc.currency"/><span> , </span><br/><br/>
                 <span>pour son adhésion au club pour l’année</span>&#160;<span t-field="doc.current_organization_season"/>
               </p>
-               <p>
-			  <br/><br/>
-        <span>Fait à </span><strong><span t-field="doc.city_of_organization"/></strong>
-			  <t>, le </t>
-			  <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/><br/></strong>
-		          </p>
-            </t>
+              <p>
+                <br/><br/>
+                <span>Fait à </span><strong><span t-field="doc.city_of_organization"/></strong>
+                <t>, le </t>
+                <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/><br/></strong>
+              </p>
+            </div>
+            <br/><br/>
+            <br/><br/>
+            <br/><br/>
+            <div class="footer">
+              <span t-field="doc.name_of_organization"/> <br/> <span t-field="doc.organization_id.street"/> <span t-field="doc.organization_id.zip"/> <span t-field="doc.organization_id.city"/>
+              <br/><span> Contact : </span> <span t-field="doc.organization_id.email"/>
+              <t t-if="doc.organization_id.image_1920">
+                <img
+                  t-att-src="image_data_uri(doc.organization_id.image_1920)"
+                  style="max-height: 200px; float: right;"
+                  alt="Logo"
+                  />
+              </t>
+            </div>
           </t>
         </t>
       </t>
-    </template>
-  </odoo>
+    </t>
+  </template>
+</odoo>

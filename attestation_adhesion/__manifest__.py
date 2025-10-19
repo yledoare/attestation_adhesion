@@ -31,6 +31,11 @@ Long description of module's purpose
         # MENU
         'views/menu.xml',
     ],
+
+    'assets': {
+        'web.report_assets_common': [ 'attestation_adhesion/static/src/css/adhesions.css' ],
+    },
+
     'installable': True,
     'application': True,
     'license': 'LGPL-3',
