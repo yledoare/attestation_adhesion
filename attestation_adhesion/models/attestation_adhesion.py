@@ -48,13 +48,14 @@ class AttestationAdhesion(models.Model):
             email_template.attachment_ids = [(5, 0, 0)]
 
     customer_id = fields.Many2one('res.partner', string='Customer')
+    organization_id = fields.Many2one('res.partner', string='Organization')
     amount = fields.Float('Amount')
-    payment_day = fields.Integer('Payment day')
+    payment_date = fields.Date('Payment day')
     currency = fields.Char('Currency', default="Euros")
 
-    name_of_customer = fields.Char(
-            string='Customer Name',
-            related='customer_id.name')
-    email_of_customer = fields.Char(
-            string='Customer Email',
-            related='customer_id.email')
+    name_of_organization = fields.Char( string='Organization Name', related='organization_id.name')
+    title_of_organization = fields.Char( string='Title', related='organization_id.organization_title')
+    city_of_organization = fields.Char( string='Title', related='organization_id.city')
+    current_organization_season = fields.Char( string='Title', related='organization_id.organization_season')
+    name_of_customer = fields.Char( string='Customer Name', related='customer_id.name')
+    email_of_customer = fields.Char( string='Customer Email', related='customer_id.email')

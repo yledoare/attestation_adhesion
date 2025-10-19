@@ -4,61 +4,35 @@
     <t t-call="web.html_container">
       <t t-foreach="docs" t-as="doc">
         <t t-call="web.external_layout">
-          <div class="text-center">
-            <h2>Adhésion</h2>
-          </div>
-          <div>
-            <br/>
-            <br/>
+          <t t-name="attestation_adhesion.attestation_adhesion_report">
+            <div class="text-center">
+              <h2>Adhésion</h2>
+            </div>
+            <div>
+              <br/>
+              <br/>
+              <br/><br/>
+            </div>
+            <div class="row" style="margin-left:500px;">
+              <strong><span t-field="doc.customer_id.name"/></strong> <br/>
+              <span t-field="doc.customer_id.street"/>  <br/>
+              <span t-field="doc.customer_id.zip"/> <span t-field="doc.customer_id.city"/> <br/> <br/>
+            </div>
+            <p><t>Je, sous-signé</t><span>&#160;</span><span t-field="doc.name_of_customer"/><br/><br/>
+              <span t-field="doc.title_of_organization"/>&#160;<span t-field="doc.name_of_organization"/><br/><br/>
+                <t>certifie avoir reçu de</t><span>&#160;</span><span t-field="doc.name_of_customer"/><span>&#160;</span><t>la somme de</t><span>&#160;</span>
+                <span t-options="{&quot;widget&quot;: &quot;float&quot;, &quot;precision&quot;: 2}" t-field="doc.amount"/> <span t-field="doc.currency"/><span> , </span><br/><br/>
+                <span>pour son adhésion au club pour l’année</span>&#160;<span t-field="doc.current_organization_season"/>
+              </p>
+               <p>
 			  <br/><br/>
-          </div>
-          <div class="row" style="margin-left:500px;">
-		  <strong><span t-field="doc.name_of_customer"/></strong>
-            <br/>
-            <br/>
-          </div>
-          <p><span t-field="doc.customer_id.title"/>, </p>
-          <p><t>I, the undersigned </t><span t-field="doc.name_of_customer"/><t>, owner of the accommodation located </t><t> declares having received </t><span t-field="doc.name_of_customer"/><t>, the sum of </t><span t-options='{"widget": "float", "precision": 2}' t-field="doc.amount"/> <span t-field="doc.name_of_customer" />
-            <t>, for the payment of rent and charges for the rental period of the month</t>
-            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%B')"/>
-            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>
-            <t> and gives him a receipt, subject to all my rights.</t>
-          </p>
-          <h3 class="text-center">
-            <t>Details of the regulations : </t>
-          </h3>
-          <div style="margin-left:200px;">
-            <p>
-              <strong>
-                <t>Adhésion:</t>
-              </strong>
-	      <span t-options='{"widget": "float", "precision": 2}' t-field="doc.amount"/> <span t-field="doc.currency" />
-            </p>
-            <p>
-              <strong>
-                <t>Provision for charges:</t>
-              </strong>
-            </p>
-            <p>
-              <strong>
-                <t>Total rent :</t>
-              </strong>
-            </p>
-	    <p>
-		    <strong><t>Payment date : </t></strong>
-		    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
-	    </p>
-          </div>
-          <div>
-		  <p>
-			  <t>I thank you in advance and please accept the expression of my most distinguished sentiments.</t>
-			  <br/><br/>
-			  <t>, the </t>
+        <span>Fait à </span><strong><span t-field="doc.city_of_organization"/></strong>
+			  <t>, le </t>
 			  <strong><span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/><br/></strong>
-		  </p>
-          </div>
+		          </p>
+            </t>
+          </t>
         </t>
       </t>
-    </t>
-  </template>
-</odoo>
+    </template>
+  </odoo>

@@ -9,7 +9,7 @@ Long description of module's purpose
     'website': "https://www.os4b.bzh",
 
     'category': 'Attestation',
-    'version': '1.00',
+    'version': '1.01',
 
     'depends': [
         'mail',
@@ -22,6 +22,7 @@ Long description of module's purpose
         'security/ir.model.access.csv',
         # VIEWS
         'views/attestation_adhesion.xml',
+        'views/res_partner_views.xml',
         # MAIL
         'data/attestation_adhesion_email.xml',
         # REPORT

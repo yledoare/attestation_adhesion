@@ -5,7 +5,7 @@
     name="Adhesions">
   <menuitem 
     id="menu_attestation_adhesion"
-    name="Adh"
+    name="Les adhésions"
     action="action_attestation_adhesion"
     sequence="1"
     />

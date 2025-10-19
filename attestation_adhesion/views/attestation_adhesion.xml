@@ -11,9 +11,10 @@
             </header>
             <group>
               <group>
+                <field name="organization_id"/>
                 <field name="customer_id"/>
                 <field name="amount"/>
-                <field name="payment_day"/>
+                <field name="payment_date"/>
               </group>
             </group>
           </sheet>
@@ -28,8 +29,10 @@
       <field name="arch" type="xml">
         <list string="Adhesions">
           <field name="customer_id"/>
+          <field name="organization_id"/>
+          <field name="title_of_organization"/>
           <field name="amount"/>
-          <field name="payment_day"/>
+          <field name="payment_date"/>
         </list>
       </field>
     </record>
