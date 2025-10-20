@@ -28,6 +28,7 @@ Long description of module's purpose
         # REPORT
         'report/attestation_adhesion_report.xml',
         'report/attestation_adhesion_report_template.xml',
+	'report/disable_header.xml',
         # MENU
         'views/menu.xml',
     ],
