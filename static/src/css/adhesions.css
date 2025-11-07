@@ -9,3 +9,6 @@
     font-size: 24px;
     text-align: justify;
 }
+#minimal_layout_report_footers {
+  display:none;
+}
