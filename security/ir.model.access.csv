@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_attestation_adhesion,Access Attestation Adhesion,model_attestation_adhesion,base.group_user,1,1,1,1
+access_attestation_adhesion_user,Attestation adhesion user,model_attestation_adhesion,attestation_adhesion.group_attestation_adhesion_user,1,0,0,0
+access_attestation_adhesion_manager,Attestation adhesion manager,model_attestation_adhesion,attestation_adhesion.group_attestation_adhesion_manager,1,1,1,1

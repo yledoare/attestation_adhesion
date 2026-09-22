@@ -59,3 +59,10 @@ class AttestationAdhesion(models.Model):
     current_organization_season = fields.Char( string='Title', related='organization_id.organization_season')
     name_of_customer = fields.Char( string='Customer Name', related='customer_id.name')
     email_of_customer = fields.Char( string='Customer Email', related='customer_id.email')
+    company_id = fields.Many2one(
+        'res.company',
+        string='Company',
+        required=True,
+        default=lambda self: self.env.company,
+        index=True,
+    )

@@ -1,0 +1,10 @@
+<odoo>
+    <record id="attestation_adhesion_company_rule" model="ir.rule">
+        <field name="name">Attestation Adhesion multi-company</field>
+        <field name="model_id" ref="model_attestation_adhesion"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('attestation_adhesion.group_attestation_adhesion_user')), (4, ref('attestation_adhesion.group_attestation_adhesion_manager'))]"/>
+    </record>
+</odoo>
+
+

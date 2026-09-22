@@ -1,0 +1,10 @@
+<odoo>
+    <record id="group_attestation_adhesion_user" model="res.groups">
+        <field name="name">Attestation Adhesion User</field>
+    </record>
+
+    <record id="group_attestation_adhesion_manager" model="res.groups">
+        <field name="name">Attestation Adhesion Manager</field>
+        <field name="implied_ids" eval="[(4, ref('attestation_adhesion.group_attestation_adhesion_user'))]"/>
+    </record>
+</odoo>

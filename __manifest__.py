@@ -19,6 +19,8 @@ Long description of module's purpose
 
     'data': [
         # SECURITY
+        'security/res_groups.xml',
+        'security/attestation_adhesion_rules.xml',
         'security/ir.model.access.csv',
         # VIEWS
         'views/attestation_adhesion.xml',
