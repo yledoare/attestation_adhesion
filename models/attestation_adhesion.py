@@ -19,6 +19,34 @@ class AttestationAdhesion(models.Model):
             ]
     _description = 'Adhesions'
 
+    user_partner_id = fields.Many2one(
+        'res.partner',
+        string="User's own partner",
+        compute='_compute_user_partner_id',
+        store=False
+    )
+
+    #user_company_id = fields.Many2one(
+    #    'res.company',
+    #    string="User's Company",
+    #    compute='_compute_user_company_id',
+    #    store=False
+    #)
+
+    def _compute_user_partner_id(self):
+        print("DEBUG YLD1")
+        for rec in self:
+            print("DEBUG YLD partner id"+str(self.env.partner.id))
+            print("DEBUG YLD company id"+str(self.env.company.id))
+            print("DEBUG YLD"+self.env.company.name)
+            rec.user_partner_id = self.env.company.id
+    def _compute_user_company_id(self):
+        print("DEBUG YLD0")
+        for rec in self:
+            print("DEBUG YLD"+str(self.env.company.id))
+            print("DEBUG YLD"+self.env.company.name)
+            rec.user_company_id = self.env.company.id
+
     def action_send_mail(self):
       template = self.env.ref('attestation_adhesion.mail_template_attestation_adhesion')
       if template:
@@ -47,10 +75,20 @@ class AttestationAdhesion(models.Model):
             email_template.send_mail(self.id)
             email_template.attachment_ids = [(5, 0, 0)]
 
-    customer_id = fields.Many2one('res.partner', string='Customer')
-    organization_id = fields.Many2one('res.partner', string='Organization')
-    amount = fields.Float('Amount')
-    payment_date = fields.Date('Payment day')
+    #customer_id = fields.Many2one('res.partner', string='Customer',domain="['|', ('company_id', '=', False), ('company_id', 'in', allowed_company_ids)]")
+    #customer_id = fields.Many2one('res.partner', string='Customer', domain=lambda self: [ ("is_company", "=", False), ("parent_id", "=", self.env.company.partner_id.id), ])
+    customer_id = fields.Many2one('res.partner', string='Customer', 
+                  required=True,
+                  )
+    #organization_id = fields.Many2one('res.partner', string='Organization', domain="['|', ('company_id', '=', False), ('company_id', 'in', allowed_company_ids)]")
+    #organization_id = fields.Many2one('res.partner', string='Organization', domain=lambda self: [ ("is_company", "=", False), ("parent_id", "=", self.env.company.partner_id.id), ])
+    organization_id = fields.Many2one('res.partner', string='Organization',
+  #                default=user_company_id,
+                  required=True,
+                  )
+
+    amount = fields.Float('Amount', default=30)
+    payment_date = fields.Date('Payment day', default=fields.Date.today)
     currency = fields.Char('Currency', default="Euros")
 
     name_of_organization = fields.Char( string='Organization Name', related='organization_id.name')
@@ -66,3 +104,4 @@ class AttestationAdhesion(models.Model):
         default=lambda self: self.env.company,
         index=True,
     )
+
